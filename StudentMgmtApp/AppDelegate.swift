@@ -88,6 +88,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func getContext () -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
+    
+    func storeStudentInfo (studentID: Int, fName: String, sName: String, courseStudy: String, address: String, ageLabel: String, gender: String) {
+        let context = getContext()
+        
+        //retrieve the entity that we just created
+        let entity =  NSEntityDescription.entity(forEntityName: "Student", in: context)
+        
+        let transc = NSManagedObject(entity: entity!, insertInto: context)
+        
+        //set the entity values
+        transc.setValue(studentID, forKey: "studentID")
+        transc.setValue(fName, forKey: "fName")
+        transc.setValue(sName, forKey: "sName")
+        transc.setValue(courseStudy, forKey: "courseStudy")
+        transc.setValue(address, forKey: "address")
+        transc.setValue(ageLabel, forKey: "ageLabel")
+        transc.setValue(gender, forKey: "gender")
+        
+        //save the object
+        do {
+            try context.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+    }
 
 }
 

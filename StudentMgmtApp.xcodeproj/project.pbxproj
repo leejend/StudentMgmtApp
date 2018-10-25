@@ -13,6 +13,7 @@
 		16B626642181405E00F92F72 /* StudentMgmtApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16B626622181405E00F92F72 /* StudentMgmtApp.xcdatamodeld */; };
 		16B626662181405E00F92F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B626652181405E00F92F72 /* Assets.xcassets */; };
 		16B626692181405E00F92F72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B626672181405E00F92F72 /* LaunchScreen.storyboard */; };
+		16B626712181451F00F92F72 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B626702181451F00F92F72 /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		16B626652181405E00F92F72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16B626682181405E00F92F72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16B6266A2181405E00F92F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B626702181451F00F92F72 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				16B6265B2181405E00F92F72 /* AppDelegate.swift */,
+				16B626702181451F00F92F72 /* LoginController.swift */,
 				16B6265D2181405E00F92F72 /* ViewController.swift */,
 				16B6265F2181405E00F92F72 /* Main.storyboard */,
 				16B626652181405E00F92F72 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16B6265E2181405E00F92F72 /* ViewController.swift in Sources */,
+				16B626712181451F00F92F72 /* LoginController.swift in Sources */,
 				16B6265C2181405E00F92F72 /* AppDelegate.swift in Sources */,
 				16B626642181405E00F92F72 /* StudentMgmtApp.xcdatamodeld in Sources */,
 			);

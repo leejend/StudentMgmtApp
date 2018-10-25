@@ -10,11 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var studentID: UITextField!
+    @IBOutlet weak var fName: UITextField!
+    @IBOutlet weak var sName: UITextField!
+    @IBOutlet weak var courseStudy: UITextField!
+    @IBOutlet weak var address: UITextField!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var ageStepper: UIStepper!
+    @IBOutlet weak var gender: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ageStepper.wraps = true
+        ageStepper.autorepeat = true
+        ageStepper.maximumValue = 65
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func addAge(_ sender: UIStepper) {
+        let step = Int(ageStepper.value)
+        ageLabel.text = String(step)
+    }
+    @IBAction func saveStudent(_ sender: Any) {
+        // get the AppDelegate object
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // call the function storePersonInfo from AppDelegate
+        appDelegate.storeStudentInfo(studentID: Int(studentID.text!)!, fName: fName.text!, sName: sName.text!, courseStudy: courseStudy.text!, address: address.text!, ageLabel: ageLabel.text!,gender: gender.text!)
+    }
+    }
+    
 
-}
 
