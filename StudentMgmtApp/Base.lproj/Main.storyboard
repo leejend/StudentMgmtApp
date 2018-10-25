@@ -110,7 +110,7 @@
                                 </constraints>
                                 <state key="normal" title="Delete student"/>
                                 <connections>
-                                    <segue destination="Ol1-qb-lva" kind="show" id="w1c-sT-slc"/>
+                                    <segue destination="Ol1-qb-lva" kind="show" id="O5L-1h-RQp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -311,7 +311,7 @@
                                     <color key="titleColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ol1-qb-lva" kind="show" id="5FU-w5-BI9"/>
+                                    <segue destination="Ol1-qb-lva" kind="show" id="0ec-ep-ddc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-3z-EQ8">
@@ -397,73 +397,59 @@
         <!--Delete Student Controller-->
         <scene sceneID="bL3-mx-Enh">
             <objects>
-                <viewController storyboardIdentifier="DeleteStudentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ol1-qb-lva" customClass="DeleteStudentController" customModule="StudentMgmtApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DeleteStudentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ol1-qb-lva" customClass="DeleteStudentController" customModule="StudentMgmtApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8fN-GS-4Wp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tYM-nf-JZS">
-                                <rect key="frame" x="16" y="135" width="343" height="221"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All Student Records" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPT-tv-4cD">
+                                <rect key="frame" x="111" y="89" width="152" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrs-id-LJi">
+                                <rect key="frame" x="196" y="497" width="142" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Clear All Records">
+                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearallRecords:" destination="Ol1-qb-lva" eventType="touchUpInside" id="nK8-QQ-Ce7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F63-3V-04Z">
+                                <rect key="frame" x="16" y="497" width="136" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Show All Records">
+                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="showallRecords:" destination="Ol1-qb-lva" eventType="touchUpInside" id="r7r-QK-Nu7"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tYM-nf-JZS">
+                                <rect key="frame" x="16" y="139" width="343" height="314"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIZ-m0-NRF">
-                                <rect key="frame" x="36" y="418" width="142" height="54"/>
-                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="142" id="K79-9u-8Si"/>
-                                    <constraint firstAttribute="height" constant="54" id="f20-eh-Lyu"/>
-                                </constraints>
-                                <state key="normal" title="Show All Records">
-                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="showallRecords:" destination="Ol1-qb-lva" eventType="touchUpInside" id="HQi-3J-1vA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="All Student Records" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPT-tv-4cD">
-                                <rect key="frame" x="111" y="89" width="152" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrs-id-LJi">
-                                <rect key="frame" x="204" y="418" width="142" height="54"/>
-                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="142" id="FDj-OB-UEj"/>
-                                    <constraint firstAttribute="height" constant="54" id="q7L-Wx-TRn"/>
-                                </constraints>
-                                <state key="normal" title="Clear All Records">
-                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="lPT-tv-4cD" firstAttribute="leading" secondItem="cNL-7h-mHi" secondAttribute="leading" constant="111" id="2Wy-PD-ZwS"/>
-                            <constraint firstItem="cNL-7h-mHi" firstAttribute="bottom" secondItem="dIZ-m0-NRF" secondAttribute="bottom" constant="146" id="Amo-QZ-SUV"/>
-                            <constraint firstItem="tYM-nf-JZS" firstAttribute="leading" secondItem="8fN-GS-4Wp" secondAttribute="leadingMargin" id="GbV-tA-4PR"/>
-                            <constraint firstItem="lPT-tv-4cD" firstAttribute="centerX" secondItem="tYM-nf-JZS" secondAttribute="centerX" id="Hpc-wG-wWL"/>
-                            <constraint firstItem="tYM-nf-JZS" firstAttribute="top" secondItem="lPT-tv-4cD" secondAttribute="bottom" constant="25" id="KgC-b0-EOb"/>
-                            <constraint firstItem="dIZ-m0-NRF" firstAttribute="baseline" secondItem="Mrs-id-LJi" secondAttribute="baseline" id="PXG-Ho-ncx"/>
-                            <constraint firstItem="lPT-tv-4cD" firstAttribute="top" secondItem="cNL-7h-mHi" secondAttribute="top" constant="25" id="SS6-Sv-zxD"/>
-                            <constraint firstItem="dIZ-m0-NRF" firstAttribute="top" secondItem="tYM-nf-JZS" secondAttribute="bottom" constant="62" id="hDe-jO-5Pb"/>
-                            <constraint firstItem="tYM-nf-JZS" firstAttribute="trailing" secondItem="8fN-GS-4Wp" secondAttribute="trailingMargin" id="mT2-QS-cgd"/>
-                            <constraint firstItem="dIZ-m0-NRF" firstAttribute="leading" secondItem="cNL-7h-mHi" secondAttribute="leading" constant="36" id="muy-5l-sWL"/>
-                            <constraint firstItem="Mrs-id-LJi" firstAttribute="leading" secondItem="dIZ-m0-NRF" secondAttribute="trailing" constant="26" id="yjS-vQ-Hj1"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cNL-7h-mHi"/>
                     </view>
                     <connections>
-                        <outlet property="records" destination="tYM-nf-JZS" id="RlL-Sg-IYe"/>
+                        <outlet property="records" destination="tYM-nf-JZS" id="gkd-Wr-BUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuY-3H-JHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4589.6000000000004" y="-632.83358320839591"/>
+            <point key="canvasLocation" x="4845.6000000000004" y="-311.69415292353824"/>
         </scene>
         <!--Edit Student Controller-->
         <scene sceneID="Ayr-7i-Xme">
@@ -567,6 +553,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5FU-w5-BI9"/>
+        <segue reference="O5L-1h-RQp"/>
     </inferredMetricsTieBreakers>
 </document>

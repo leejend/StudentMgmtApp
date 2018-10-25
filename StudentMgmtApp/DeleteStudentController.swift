@@ -9,9 +9,10 @@
 import UIKit
 
 class DeleteStudentController: UIViewController {
+
+
     
     @IBOutlet weak var records: UITextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,11 +23,20 @@ class DeleteStudentController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func showallRecords(_ sender: Any) { let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        records.text = appDelegate.getStudentInfo()
+    @IBAction func clearallRecords(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.removeRecords();
+        
     }
+    
+    @IBAction func showallRecords(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        records.text! = appDelegate.getStudentInfo()
+    }
+}
+
     
     
 
-}
+    
+

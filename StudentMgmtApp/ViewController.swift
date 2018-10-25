@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     
     @IBAction func saveStudent(_ sender: Any) {
         // get the AppDelegate object
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
        do {
             showAlert(msg: "Student details saved")
@@ -56,6 +56,14 @@ class ViewController: UIViewController {
         
         // call the function storePersonInfo from AppDelegate
         appDelegate.storeStudentInfo(studentID: Int(studentID.text!)!, fName: fName.text!, sName: sName.text!, courseStudy: courseStudy.text!, address: address.text!, ageLabel: ageLabel.text!, gender: gender.text!)
+        
+        studentID.text = ""
+        fName.text = ""
+        sName.text = ""
+        courseStudy.text = ""
+        address.text = ""
+        ageLabel.text = ""
+        gender.text = ""
     
 
         
