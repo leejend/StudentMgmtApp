@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var ageStepper: UIStepper!
-    @IBOutlet weak var gender: UITextField!
+    @IBOutlet weak var segGender: UISegmentedControl!
+    @IBOutlet weak var gender: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +28,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+
     @IBAction func addAge(_ sender: UIStepper) {
         let step = Int(ageStepper.value)
         ageLabel.text = String(step)
     }
+
+    @IBAction func selectedSegGender(_ sender: Any) {
+        //call selected option for segment control
+        if self.segGender.selectedSegmentIndex == 0 {
+            gender.text = "Female"
+        }
+        else {
+            gender.text = "Male"
+        }
+    }
+    
     @IBAction func saveStudent(_ sender: Any) {
         // get the AppDelegate object
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -42,7 +55,10 @@ class ViewController: UIViewController {
         }
         
         // call the function storePersonInfo from AppDelegate
-        appDelegate.storeStudentInfo(studentID: Int(studentID.text!)!, fName: fName.text!, sName: sName.text!, courseStudy: courseStudy.text!, address: address.text!, ageLabel: ageLabel.text!,gender: gender.text!)
+        appDelegate.storeStudentInfo(studentID: Int(studentID.text!)!, fName: fName.text!, sName: sName.text!, courseStudy: courseStudy.text!, address: address.text!, ageLabel: ageLabel.text!, gender: gender.text!)
+    
+
+        
     }
     
     func showAlert(msg: String) {

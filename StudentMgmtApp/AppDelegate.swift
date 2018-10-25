@@ -144,7 +144,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let ageLabel = trans.value(forKey: "ageLabel") as! String
                 let gender = trans.value(forKey: "gender") as! String
                 
-                info = info + id + ", " + fName + " " + sName + ", " + courseStudy + ", " + ageLabel + ", " + gender + "\n"
+                info = info
+                    + "Student ID: " + id
+                    + ", "
+                    + "First Name: " + fName
+                    + ", "
+                    + "Surname: " + sName
+                    + ", "
+                    + "Course Study: " + courseStudy
+                    + ", "
+                    + "Age: " + ageLabel
+                    + ", "
+                    + "Gender: " + gender + "\n \n"
             }
         } catch {
             print("Error with request: \(error)")
