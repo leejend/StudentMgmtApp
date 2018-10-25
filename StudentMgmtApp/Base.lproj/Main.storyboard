@@ -40,13 +40,40 @@
             </objects>
             <point key="canvasLocation" x="156" y="122"/>
         </scene>
-        <!--View Controller-->
+        <!--Exam Controller-->
         <scene sceneID="ClT-uN-ueC">
             <objects>
-                <viewController id="5rL-e0-BeR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExamController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5rL-e0-BeR" customClass="ExamController" customModule="StudentMgmtApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Wv-wk-gJU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9q-sb-6hm">
+                                <rect key="frame" x="141" y="300" width="114" height="51"/>
+                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="7sH-ex-rWx"/>
+                                    <constraint firstAttribute="height" constant="72" id="EDh-KR-j3J"/>
+                                </constraints>
+                                <state key="normal" title="View Exam">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgc-C7-KBc">
+                                <rect key="frame" x="141" y="203" width="111" height="55"/>
+                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="gVb-Tu-LP3"/>
+                                    <constraint firstAttribute="height" constant="72" id="pcy-Uf-nFc"/>
+                                </constraints>
+                                <state key="normal" title="Add Exam">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cjB-qE-G2b" kind="show" id="792-Sx-BJz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HL8-Eb-DrW"/>
                     </view>
@@ -55,6 +82,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGh-hh-Usk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2812" y="452.92353823088462"/>
+        </scene>
+        <!--Add Exam Controller-->
+        <scene sceneID="13e-Yx-AdO">
+            <objects>
+                <viewController storyboardIdentifier="AddExamController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cjB-qE-G2b" customClass="AddExamController" customModule="StudentMgmtApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lEb-yv-sQC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LE5-vp-Xjj">
+                                <rect key="frame" x="144" y="96" width="192" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icf-AE-exP">
+                                <rect key="frame" x="146" y="153" width="188" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unit Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Q-Ac-5oC">
+                                <rect key="frame" x="30" y="99" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vof-6n-9RK">
+                                <rect key="frame" x="30" y="153" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Date &amp; Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozq-I7-M4c">
+                                <rect key="frame" x="30" y="208" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kw7-0F-Voc">
+                                <rect key="frame" x="0.0" y="237" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="562154793.45524096">
+                                    <!--2018-10-25 10:06:33 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="n8x-Pq-azV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0O8-85-P74" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3772" y="471.8140929535233"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZYe-rp-GHu">
@@ -86,7 +172,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="iAB-jc-VpW"/>
                                 </constraints>
-                                <state key="normal" title="Add student"/>
+                                <state key="normal" title="Add new student record"/>
                                 <connections>
                                     <segue destination="h1C-dx-tcB" kind="show" id="oKN-p5-Fnq"/>
                                 </connections>
@@ -97,7 +183,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="MPC-Lp-7km"/>
                                 </constraints>
-                                <state key="normal" title="Edit student"/>
+                                <state key="normal" title="Edit student record"/>
                                 <connections>
                                     <segue destination="5NU-Jb-UjY" kind="show" id="CAJ-4E-9fd"/>
                                 </connections>
@@ -108,7 +194,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="sYr-Ep-Scc"/>
                                 </constraints>
-                                <state key="normal" title="Delete student"/>
+                                <state key="normal" title="Delete records"/>
                                 <connections>
                                     <segue destination="Ol1-qb-lva" kind="show" id="O5L-1h-RQp"/>
                                 </connections>
@@ -467,7 +553,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="yZW-GP-bz7"/>
                     </view>
                 </viewController>

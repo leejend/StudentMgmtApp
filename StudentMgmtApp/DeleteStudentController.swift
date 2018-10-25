@@ -26,7 +26,7 @@ class DeleteStudentController: UIViewController {
     @IBAction func clearallRecords(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.removeRecords();
-        
+        records.text = ""
     }
     
     @IBAction func showallRecords(_ sender: Any) {
