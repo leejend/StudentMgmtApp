@@ -34,8 +34,22 @@ class ViewController: UIViewController {
     @IBAction func saveStudent(_ sender: Any) {
         // get the AppDelegate object
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+       do {
+            showAlert(msg: "Student details saved sucessfully")
+        } catch {
+            showAlert(msg: "Error when saving to file")
+        }
+        
         // call the function storePersonInfo from AppDelegate
         appDelegate.storeStudentInfo(studentID: Int(studentID.text!)!, fName: fName.text!, sName: sName.text!, courseStudy: courseStudy.text!, address: address.text!, ageLabel: ageLabel.text!,gender: gender.text!)
+    }
+    
+    func showAlert(msg: String) {
+        let alert = UIAlertController(title: "Message", message: msg, preferredStyle: UIAlertController.Style.alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion:nil)
     }
     }
     
