@@ -122,5 +122,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func getStudentInfo () -> String {
+        var info = ""
+        
+        //create a fetch request, telling it about the entity
+        let fetchRequest: NSFetchRequest<Student> = Student.fetchRequest()
+        
+        do {
+            //go get the results
+            let searchResults = try getContext().fetch(fetchRequest)
+            
+            //I like to check the size of the returned results!
+            print ("num of results = \(searchResults.count)")
+            
+            //You need to convert to NSManagedObject to use 'for' loops
+            for trans in searchResults as [NSManagedObject] {
+                let id = String(trans.value(forKey: "studentID") as! Int)
+                let fName = trans.value(forKey: "fName") as! String
+                let sName = trans.value(forKey: "sName") as! String
+                let courseStudy = trans.value(forKey: "courseStudy") as! String
+                let ageLabel = trans.value(forKey: "ageLabel") as! String
+                let gender = trans.value(forKey: "gender") as! String
+                
+                info = info + id + ", " + fName + " " + sName + ", " + courseStudy + ", " + ageLabel + ", " + gender + "\n"
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
+        return info;
+    }
+    
 }
 

@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
        do {
-            showAlert(msg: "Student details saved sucessfully")
+            showAlert(msg: "Student details saved")
         } catch {
             showAlert(msg: "Error when saving to file")
         }
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     }
     
     func showAlert(msg: String) {
-        let alert = UIAlertController(title: "Message", message: msg, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Successful", message: msg, preferredStyle: UIAlertController.Style.alert)
         let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         self.present(alert, animated: true, completion:nil)
