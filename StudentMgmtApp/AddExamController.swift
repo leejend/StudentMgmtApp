@@ -9,11 +9,10 @@
 import UIKit
 
 class AddExamController: UIViewController {
-    
-
     @IBOutlet weak var unitName: UITextField!
     @IBOutlet weak var location: UITextField!
-    @IBOutlet weak var dateTime: UIDatePicker!
+    @IBOutlet weak var dateTime: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,7 +24,8 @@ class AddExamController: UIViewController {
     @IBAction func addExam(_ sender: Any) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
-        let strDate = dateFormatter.string(from: dateTime.date)
+        let strDate = dateFormatter.string(from: datePicker.date)
+        dateTime.text = strDate
 
     
         // get the AppDelegate object
@@ -38,16 +38,14 @@ class AddExamController: UIViewController {
         }
         
         // call the function storeExamInfo from AppDelegate
-        appDelegate.storeExamInfo(unitName: unitName.text!, location: location.text!, dateTime: dateTime.date!)
+        appDelegate.storeExamInfo(unitName: unitName.text!, location: location.text!, dateTime: dateTime.text!)
         
         unitName.text = ""
         location.text = ""
-       // dateTime.datePickerMode = ""
+       dateTime.text! = ""
         
     }
             
-            
-        }
         
         func showAlert(msg: String) {
             let alert = UIAlertController(title: "Successful", message: msg, preferredStyle: UIAlertController.Style.alert)
@@ -55,4 +53,4 @@ class AddExamController: UIViewController {
             alert.addAction(cancelAction)
             self.present(alert, animated: true, completion:nil)
         }
-
+}

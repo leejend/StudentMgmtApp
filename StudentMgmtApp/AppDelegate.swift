@@ -201,5 +201,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
     }
+    
+    func getExamInfo () -> String {
+        var info = ""
+        
+        //create a fetch request, telling it about the entity
+        let fetchRequest: NSFetchRequest<Exam> = Exam.fetchRequest()
+        
+        do {
+            //go get the results
+            let searchResults = try getContext().fetch(fetchRequest)
+            
+            //I like to check the size of the returned results!
+            print ("num of results = \(searchResults.count)")
+            
+            //You need to convert to NSManagedObject to use 'for' loops
+            for trans in searchResults as [NSManagedObject] {
+                let unit = trans.value(forKey: "unitName") as! String
+                let location = trans.value(forKey: "location") as! String
+                let date = trans.value(forKey: "dateTime") as! String
+                
+                info = info
+                    + "Unit Name: " + unit
+                    + ", "
+                    + "Location: " + location
+                    + ", "
+                    + "Date: " + date
+                    + "\n \n"
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
+        return info;
+    }
+    func removeExams () {
+        let context = getContext()
+        // delete everything in the table Person
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Exam")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+        } catch {
+            print ("There was an error")
+        }
+    }
 }
 

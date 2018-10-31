@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16614A272189C139006B74EC /* ViewExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16614A262189C139006B74EC /* ViewExamController.swift */; };
 		16B6265C2181405E00F92F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6265B2181405E00F92F72 /* AppDelegate.swift */; };
 		16B6265E2181405E00F92F72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6265D2181405E00F92F72 /* ViewController.swift */; };
 		16B626612181405E00F92F72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B6265F2181405E00F92F72 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16614A262189C139006B74EC /* ViewExamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExamController.swift; sourceTree = "<group>"; };
 		16B626582181405E00F92F72 /* StudentMgmtApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentMgmtApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B6265B2181405E00F92F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16B6265D2181405E00F92F72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,13 +69,14 @@
 			isa = PBXGroup;
 			children = (
 				16B6265B2181405E00F92F72 /* AppDelegate.swift */,
+				16614A262189C139006B74EC /* ViewExamController.swift */,
 				16B626782181CDBC00F92F72 /* AddExamController.swift */,
 				16B626702181451F00F92F72 /* LoginController.swift */,
 				16B6265D2181405E00F92F72 /* ViewController.swift */,
 				16B6267221814DFB00F92F72 /* EditStudentController.swift */,
 				16B6267421814ECC00F92F72 /* DeleteStudentController.swift */,
-				16B6265F2181405E00F92F72 /* Main.storyboard */,
 				16B626762181CB7500F92F72 /* ExamController.swift */,
+				16B6265F2181405E00F92F72 /* Main.storyboard */,
 				16B626652181405E00F92F72 /* Assets.xcassets */,
 				16B626672181405E00F92F72 /* LaunchScreen.storyboard */,
 				16B6266A2181405E00F92F72 /* Info.plist */,
@@ -156,6 +159,7 @@
 				16B6265E2181405E00F92F72 /* ViewController.swift in Sources */,
 				16B626772181CB7500F92F72 /* ExamController.swift in Sources */,
 				16B626792181CDBC00F92F72 /* AddExamController.swift in Sources */,
+				16614A272189C139006B74EC /* ViewExamController.swift in Sources */,
 				16B626712181451F00F92F72 /* LoginController.swift in Sources */,
 				16B6265C2181405E00F92F72 /* AppDelegate.swift in Sources */,
 				16B6267321814DFB00F92F72 /* EditStudentController.swift in Sources */,

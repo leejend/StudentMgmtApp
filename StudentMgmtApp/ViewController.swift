@@ -54,7 +54,7 @@ class ViewController: UIViewController {
             showAlert(msg: "Error when saving to file")
         }
         
-        // call the function storePersonInfo from AppDelegate
+        // call the function storeStudentInfo from AppDelegate
         appDelegate.storeStudentInfo(studentID: Int(studentID.text!)!, fName: fName.text!, sName: sName.text!, courseStudy: courseStudy.text!, address: address.text!, ageLabel: ageLabel.text!, gender: gender.text!)
         
         studentID.text = ""
