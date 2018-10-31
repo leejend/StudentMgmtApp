@@ -19,6 +19,7 @@
 		16B6267521814ECC00F92F72 /* DeleteStudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6267421814ECC00F92F72 /* DeleteStudentController.swift */; };
 		16B626772181CB7500F92F72 /* ExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B626762181CB7500F92F72 /* ExamController.swift */; };
 		16B626792181CDBC00F92F72 /* AddExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B626782181CDBC00F92F72 /* AddExamController.swift */; };
+		16DD93DE2189CDDB008C3F72 /* userProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD93DD2189CDDB008C3F72 /* userProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		16B6267421814ECC00F92F72 /* DeleteStudentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteStudentController.swift; sourceTree = "<group>"; };
 		16B626762181CB7500F92F72 /* ExamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamController.swift; sourceTree = "<group>"; };
 		16B626782181CDBC00F92F72 /* AddExamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExamController.swift; sourceTree = "<group>"; };
+		16DD93DD2189CDDB008C3F72 /* userProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				16B6267221814DFB00F92F72 /* EditStudentController.swift */,
 				16B6267421814ECC00F92F72 /* DeleteStudentController.swift */,
 				16B626762181CB7500F92F72 /* ExamController.swift */,
+				16DD93DD2189CDDB008C3F72 /* userProfileController.swift */,
 				16B6265F2181405E00F92F72 /* Main.storyboard */,
 				16B626652181405E00F92F72 /* Assets.xcassets */,
 				16B626672181405E00F92F72 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DD93DE2189CDDB008C3F72 /* userProfileController.swift in Sources */,
 				16B6265E2181405E00F92F72 /* ViewController.swift in Sources */,
 				16B626772181CB7500F92F72 /* ExamController.swift in Sources */,
 				16B626792181CDBC00F92F72 /* AddExamController.swift in Sources */,
