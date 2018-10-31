@@ -50,7 +50,6 @@
 		16B6264F2181405E00F92F72 = {
 			isa = PBXGroup;
 			children = (
-				16B626782181CDBC00F92F72 /* AddExamController.swift */,
 				16B6265A2181405E00F92F72 /* StudentMgmtApp */,
 				16B626592181405E00F92F72 /* Products */,
 			);
@@ -68,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				16B6265B2181405E00F92F72 /* AppDelegate.swift */,
+				16B626782181CDBC00F92F72 /* AddExamController.swift */,
 				16B626702181451F00F92F72 /* LoginController.swift */,
 				16B6265D2181405E00F92F72 /* ViewController.swift */,
 				16B6267221814DFB00F92F72 /* EditStudentController.swift */,

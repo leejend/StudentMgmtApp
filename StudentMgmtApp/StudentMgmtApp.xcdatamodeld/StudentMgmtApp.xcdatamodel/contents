@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Exam" representedClassName="Exam" syncable="YES" codeGenerationType="class">
+        <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ageLabel" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,5 +16,6 @@
     </entity>
     <elements>
         <element name="Student" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Exam" positionX="-45" positionY="54" width="128" height="90"/>
     </elements>
 </model>

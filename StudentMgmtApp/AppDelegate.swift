@@ -175,5 +175,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print ("There was an error")
         }
     }
+    
+    
+    func storeExamInfo (unitName: String, location: String, dateTime: String) {
+        let context = getContext()
+        
+        //retrieve the entity that we just created
+        let entity =  NSEntityDescription.entity(forEntityName: "Exam", in: context)
+        
+        let transc = NSManagedObject(entity: entity!, insertInto: context)
+        
+        //set the entity values
+        transc.setValue(unitName, forKey: "unitName")
+        transc.setValue(location, forKey: "location")
+        transc.setValue(dateTime, forKey: "dateTime")
+        
+        
+        //save the object
+        do {
+            try context.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+    }
 }
 
