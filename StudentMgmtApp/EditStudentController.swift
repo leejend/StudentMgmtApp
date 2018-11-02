@@ -27,13 +27,18 @@ class EditStudentController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var btnDrop: UIButton!
     @IBOutlet weak var tblView: UITableView!
     
-    
+//    func callStudentInfo() -> String {
+//    // call the function storeStudentInfo from AppDelegate
+//    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//    UITableView.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) = appDelegate.getStudentInfo()
+//    }
     var fruitList = ["Orange", "Banana", "Apple", "Blueberry", "Mango", "Cherry", "Grape", "Strawberry"]
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tblView.isHidden = true
-//        lbl.isHidden = true
-//        lbl.text = "This is Simple Drop Down in which you can change according to your requirment. Dont Forget to #SUBSCRIBE #SHARE #COMMENT #LIKE"
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -43,6 +48,8 @@ class EditStudentController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     @IBAction func onClickDropButton(_ sender: Any) {
+        
+        
         if tblView.isHidden {
             animate(toogle: true, type: btnDrop)
         } else {
@@ -63,8 +70,7 @@ class EditStudentController: UIViewController, UITableViewDelegate, UITableViewD
                     self.tblView.isHidden = true
                 }
             }
-    //extension ViewController:  {
-            
+        }
+     
     }
-}
 }
