@@ -22,16 +22,42 @@ class EditStudentController: UIViewController, UITableViewDelegate, UITableViewD
         btnDrop.setTitle("\(fruitList[indexPath.row])", for: .normal)
         animate(toogle: false, type: btnDrop)
     }
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+//    {
+//
+//        let student = Student[indexPath.row]
+//
+//        if editingStyle == .delete {
+//            getContext.delete(Student)
+//
+//            do {
+//                try getContext.save()
+//            } catch let error as NSError {
+//                print("Error While Deleting Note: \(error.userInfo)")
+//            }
+//
+//        }
+    
+//        // Fetch new data/reload table
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Student)
+//
+//        do {
+//            Student = try getContext.fetch(fetchRequest) as! [NSManagedObject]
+//        } catch let error as NSError {
+//            print("Error While Fetching Data From DB: \(error.userInfo)")
+//        }
+//
+//        tableView.reloadData()
+//    }
 
     
     @IBOutlet weak var btnDrop: UIButton!
     @IBOutlet weak var tblView: UITableView!
     
-//    func callStudentInfo() -> String {
-//    // call the function storeStudentInfo from AppDelegate
-//    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//    UITableView.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) = appDelegate.getStudentInfo()
-//    }
+  
+    
+    
     var fruitList = ["Orange", "Banana", "Apple", "Blueberry", "Mango", "Cherry", "Grape", "Strawberry"]
    
     

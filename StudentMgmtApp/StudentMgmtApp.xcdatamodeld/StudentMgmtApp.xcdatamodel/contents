@@ -4,7 +4,7 @@
         <attribute name="dateTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="unitName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="relationship" inverseEntity="Student" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" syncable="YES"/>
     </entity>
     <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,10 +14,9 @@
         <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="studentID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exam" inverseName="relationship" inverseEntity="Exam" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Exam" positionX="265.55859375" positionY="14.51953125" width="128" height="105"/>
-        <element name="Student" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="Exam" positionX="265.55859375" positionY="14.51953125" width="128" height="103"/>
+        <element name="Student" positionX="-63" positionY="-18" width="128" height="148"/>
     </elements>
 </model>
