@@ -741,9 +741,9 @@
         <scene sceneID="2CV-V4-T3q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3V-Uj-Qm5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Students" image="icon_student" id="LuE-hJ-0cI"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Students" selectedImage="icon_Student" id="LuE-hJ-0cI"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R1o-Yk-gvQ">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R1o-Yk-gvQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -760,11 +760,9 @@
         <scene sceneID="keG-wH-d8i">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mAH-JY-kBr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exam" image="icon_exams" id="UyE-WR-i9T">
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Exam" image="icon_Exams" id="UyE-WR-i9T"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="45J-oH-0OY">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="45J-oH-0OY">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -781,9 +779,9 @@
         <scene sceneID="04G-uP-Em8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1xk-er-tJS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User Profile" image="icon_tasks" id="3f2-ZL-Tp5"/>
+                    <tabBarItem key="tabBarItem" title="User Profile" image="icon_User Profile" id="3f2-ZL-Tp5"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S8T-B6-LTA">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S8T-B6-LTA">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -798,9 +796,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_exams" width="44" height="44"/>
-        <image name="icon_student" width="44" height="44"/>
-        <image name="icon_tasks" width="44" height="44"/>
+        <image name="icon_Exams" width="20" height="20"/>
+        <image name="icon_Student" width="20" height="20"/>
+        <image name="icon_User Profile" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kw7-DR-WkB"/>

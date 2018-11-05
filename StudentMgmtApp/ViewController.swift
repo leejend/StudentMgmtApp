@@ -50,11 +50,12 @@ class ViewController: UIViewController {
         
        do {
             showAlert(msg: "Student details saved")
-        } catch {
-            showAlert(msg: "Error when saving to file")
+        } catch let msg as NSError {
+            showAlert(msg: "Could not save \(msg), \(msg.userInfo)")
         }
         
         // call the function storeStudentInfo from AppDelegate
+    
         appDelegate.storeStudentInfo(studentID: Int(studentID.text!)!, fName: fName.text!, sName: sName.text!, courseStudy: courseStudy.text!, address: address.text!, ageLabel: ageLabel.text!, gender: gender.text!)
         
         studentID.text = ""
@@ -63,11 +64,10 @@ class ViewController: UIViewController {
         courseStudy.text = ""
         address.text = ""
         ageLabel.text = ""
-        gender.text = ""
-    
-
+            gender.text = ""
         
-    }
+        }
+
     
     func showAlert(msg: String) {
         let alert = UIAlertController(title: "Successful", message: msg, preferredStyle: UIAlertController.Style.alert)
